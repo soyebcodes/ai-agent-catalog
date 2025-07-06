@@ -1,5 +1,5 @@
 import React from "react";
-import CatalogClient from "./CatelogClient";
+import CatalogClient from "./CatalogClient";
 import agents from "@/lib/data/mock-agents.json";
 import { Metadata } from "next";
 import { getServerSession } from "next-auth";
@@ -25,7 +25,6 @@ export default async function CatalogPage() {
 
   return (
     <main className="max-w-6xl mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-4">AI Agent Catalog</h1>
       <CatalogClient agents={agents} />
     </main>
   );
