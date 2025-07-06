@@ -1,14 +1,25 @@
 import React from "react";
 import CatalogClient from "./CatelogClient";
 import agents from "@/lib/data/mock-agents.json";
+import { Metadata } from "next";
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/lib/auth";
+import { redirect } from "next/navigation";
 
-export const metadata = {
-  title: "ArkLab AI Agent Catalog",
-  description:
-    "Browse and filter through AI agents for different categories and use cases.",
+export const generateMetadata = (): Metadata => {
+  return {
+    title: "ArkLab AI Agent Catalog",
+    description:
+      "Explore powerful AI agents for customer service, marketing, development, and more.",
+  };
 };
 
 export default async function CatalogPage() {
+  const session = await getServerSession(authOptions);
+
+  if (!session) {
+    redirect("/");
+  }
   // ssr api delay
   await new Promise((resolve) => setTimeout(resolve, 1000));
 
