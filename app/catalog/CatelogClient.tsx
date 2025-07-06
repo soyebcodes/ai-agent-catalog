@@ -1,15 +1,10 @@
 "use client";
 import AgentCard from "@/components/AgentCard";
-import {
-  setSearchQuery,
-  toggleStatus,
-  toggleCategory,
-  setPricingModel,
-  clearAllFilters,
-} from "@/store/filterSlice";
+import { setSearchQuery, clearAllFilters } from "@/store/filterSlice";
 import { useAppSelector, useAppDispatch } from "@/store";
 import { useMemo } from "react";
 import Filters from "@/components/Filters";
+import { motion } from "framer-motion";
 
 type Agent = {
   id: string;
@@ -66,11 +61,14 @@ export default function CatalogClient({ agents }: { agents: Agent[] }) {
       >
         Clear filter
       </button>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+      <motion.div
+        layout
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4"
+      >
         {filteredAgents.map((agent) => (
           <AgentCard key={agent.id} agent={agent} />
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 }
