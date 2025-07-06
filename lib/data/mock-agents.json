@@ -5,7 +5,8 @@
     "description": "An advanced AI chatbot for enhanced customer support and query resolution.",
     "status": "Active",
     "category": "Customer Service",
-    "pricingModel": "Subscription"
+    "pricingModel": "Subscription",
+    "imageUrl": "https://ui-avatars.com/api/?name=Intelligent+Chatbot+Pro"
   },
   {
     "id": "agent-002",
@@ -13,7 +14,8 @@
     "description": "Next-generation voice automation for internal operations and data retrieval.",
     "status": "Beta",
     "category": "Operations",
-    "pricingModel": "Per-Use"
+    "pricingModel": "Per-Use",
+    "imageUrl": "https://ui-avatars.com/api/?name=Voice+Assistant+X"
   },
   {
     "id": "agent-003",
@@ -21,7 +23,8 @@
     "description": "AI-powered tool to generate engaging marketing copy, ideas, and campaign outlines.",
     "status": "Active",
     "category": "Marketing",
-    "pricingModel": "Subscription"
+    "pricingModel": "Subscription",
+    "imageUrl": "https://ui-avatars.com/api/?name=Marketing+Content+Generator"
   },
   {
     "id": "agent-004",
@@ -29,7 +32,8 @@
     "description": "An autonomous AI agent designed to automate data analysis and report generation.",
     "status": "Archived",
     "category": "Data Analysis",
-    "pricingModel": "Free Tier"
+    "pricingModel": "Free Tier",
+    "imageUrl": "https://ui-avatars.com/api/?name=Data+Analyst+Agent"
   },
   {
     "id": "agent-005",
@@ -37,7 +41,8 @@
     "description": "AI assistant that provides instant feedback and suggestions for code quality.",
     "status": "Beta",
     "category": "Development",
-    "pricingModel": "Free Tier"
+    "pricingModel": "Free Tier",
+    "imageUrl": "https://ui-avatars.com/api/?name=Code+Review+Assistant"
   },
   {
     "id": "agent-006",
@@ -45,7 +50,8 @@
     "description": "Automates the new employee onboarding process, answering FAQs and guiding through tasks.",
     "status": "Active",
     "category": "Human Resources",
-    "pricingModel": "Subscription"
+    "pricingModel": "Subscription",
+    "imageUrl": "https://ui-avatars.com/api/?name=HR+Onboarding+Bot"
   },
   {
     "id": "agent-007",
@@ -53,7 +59,8 @@
     "description": "Optimizes and automates your social media content scheduling and posting.",
     "status": "Active",
     "category": "Marketing",
-    "pricingModel": "Subscription"
+    "pricingModel": "Subscription",
+    "imageUrl": "https://ui-avatars.com/api/?name=Social+Media+Scheduler+AI"
   },
   {
     "id": "agent-008",
@@ -61,7 +68,8 @@
     "description": "Provides personalized financial advice and investment insights.",
     "status": "Beta",
     "category": "Finance",
-    "pricingModel": "Per-Use"
+    "pricingModel": "Per-Use",
+    "imageUrl": "https://ui-avatars.com/api/?name=Financial+Advisor+AI"
   },
   {
     "id": "agent-009",
@@ -69,7 +77,8 @@
     "description": "Assists in drafting legal documents and contracts with AI accuracy.",
     "status": "Archived",
     "category": "Legal",
-    "pricingModel": "Per-Use"
+    "pricingModel": "Per-Use",
+    "imageUrl": "https://ui-avatars.com/api/?name=Legal+Document+Drafter"
   },
   {
     "id": "agent-010",
@@ -77,6 +86,7 @@
     "description": "Analyzes customer feedback from various channels to identify key sentiments and trends.",
     "status": "Active",
     "category": "Customer Service",
-    "pricingModel": "Subscription"
+    "pricingModel": "Subscription",
+    "imageUrl": "https://ui-avatars.com/api/?name=Customer+Feedback+Analyzer"
   }
 ]

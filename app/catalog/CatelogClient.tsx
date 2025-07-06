@@ -1,6 +1,5 @@
 "use client";
 import AgentCard from "@/components/AgentCard";
-import { Input } from "@/components/ui/input";
 import { useState } from "react";
 
 type Agent = {
@@ -10,7 +9,16 @@ type Agent = {
   status: string;
   category: string;
   pricingModel: string;
+  imageUrl: string;
 };
+
+function getInitials(name: string) {
+  const words = name.split(" ");
+  const initials = words
+    .slice(0, 2)
+    .map((word) => word[0]?.toUpperCase() || "");
+  return initials.join("");
+}
 
 export default function CatalogClient({ agents }: { agents: Agent[] }) {
   const [searchQuery, setSearchQuery] = useState("");
@@ -20,6 +28,7 @@ export default function CatalogClient({ agents }: { agents: Agent[] }) {
       agent.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       agent.description.toLowerCase().includes(searchQuery.toLowerCase())
   );
+
   return (
     <div>
       <input
