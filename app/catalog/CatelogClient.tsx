@@ -1,6 +1,14 @@
 "use client";
 import AgentCard from "@/components/AgentCard";
-import { useState } from "react";
+import {
+  setSearchQuery,
+  toggleStatus,
+  toggleCategory,
+  setPricingModel,
+  clearAllFilters,
+} from "@/store/filterSlice";
+import { useAppSelector, useAppDispatch } from "@/store";
+import { useMemo } from "react";
 
 type Agent = {
   id: string;
@@ -12,22 +20,33 @@ type Agent = {
   imageUrl: string;
 };
 
-function getInitials(name: string) {
-  const words = name.split(" ");
-  const initials = words
-    .slice(0, 2)
-    .map((word) => word[0]?.toUpperCase() || "");
-  return initials.join("");
-}
-
 export default function CatalogClient({ agents }: { agents: Agent[] }) {
-  const [searchQuery, setSearchQuery] = useState("");
+  const dispatch = useAppDispatch();
 
-  const filteredAgents = agents.filter(
-    (agent) =>
-      agent.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      agent.description.toLowerCase().includes(searchQuery.toLowerCase())
+  const { searchQuery, status, category, pricingModel } = useAppSelector(
+    (state) => state.filters
   );
+
+  const filteredAgents = useMemo(() => {
+    return agents.filter((agent) => {
+      const matchesSearch =
+        agent.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        agent.description.toLowerCase().includes(searchQuery.toLowerCase());
+
+      const matchesStatus =
+        status.length === 0 || status.includes(agent.status);
+
+      const matchesCategory =
+        category.length === 0 || category.includes(agent.category);
+
+      const matchesPricing =
+        pricingModel === null || agent.pricingModel === pricingModel;
+
+      return (
+        matchesSearch && matchesStatus && matchesCategory && matchesPricing
+      );
+    });
+  }, [agents, searchQuery, status, category, pricingModel]);
 
   return (
     <div>
@@ -36,9 +55,15 @@ export default function CatalogClient({ agents }: { agents: Agent[] }) {
         placeholder="Search agents..."
         className="w-full p-2 border rounded mb-4"
         value={searchQuery}
-        onChange={(e) => setSearchQuery(e.target.value)}
+        onChange={(e) => dispatch(setSearchQuery(e.target.value))}
       />
 
+      <button
+        onClick={() => dispatch(clearAllFilters())}
+        className="text-sm text-blue-600 underline mb-4 block cursor-pointer"
+      >
+        Clear filter
+      </button>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {filteredAgents.map((agent) => (
           <AgentCard key={agent.id} agent={agent} />
