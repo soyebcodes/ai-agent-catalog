@@ -9,6 +9,7 @@ import {
 } from "@/store/filterSlice";
 import { useAppSelector, useAppDispatch } from "@/store";
 import { useMemo } from "react";
+import Filters from "@/components/Filters";
 
 type Agent = {
   id: string;
@@ -50,6 +51,7 @@ export default function CatalogClient({ agents }: { agents: Agent[] }) {
 
   return (
     <div>
+      <Filters />
       <input
         type="text"
         placeholder="Search agents..."
