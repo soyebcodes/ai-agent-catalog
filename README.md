@@ -4,7 +4,7 @@ A responsive, SEO-friendly AI agent catalog built with **Next.js**, **TypeScript
 
 ## 🚀 Live Demo
 
-👉 [View Deployed App on Vercel](https://your-vercel-url.vercel.app)
+👉 [View Deployed App on Vercel](https://ai-agent-catalog-omega.vercel.app)
 
 ---
 
