@@ -7,6 +7,7 @@ import Filters from "@/components/Filters";
 import { motion } from "framer-motion";
 import LogoutBtn from "@/components/LogoutBtn";
 import UserInfo from "@/components/UserInfo";
+import { ModeToggle } from "@/components/ThemeToggle";
 
 type Agent = {
   id: string;
@@ -53,6 +54,7 @@ export default function CatalogClient({ agents }: { agents: Agent[] }) {
         <div className="flex items-center gap-8">
           <UserInfo />
           <LogoutBtn />
+          <ModeToggle />
         </div>
       </div>
       <Filters />

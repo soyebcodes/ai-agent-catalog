@@ -8,7 +8,7 @@ import { redirect } from "next/navigation";
 
 export const generateMetadata = (): Metadata => {
   return {
-    title: "ArkLab AI Agent Catalog",
+    title: "AI Agent Catalog",
     description:
       "Explore powerful AI agents for customer service, marketing, development, and more.",
   };
