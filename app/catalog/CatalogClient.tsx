@@ -6,6 +6,7 @@ import { useMemo } from "react";
 import Filters from "@/components/Filters";
 import { motion } from "framer-motion";
 import LogoutBtn from "@/components/LogoutBtn";
+import UserInfo from "@/components/UserInfo";
 
 type Agent = {
   id: string;
@@ -49,7 +50,10 @@ export default function CatalogClient({ agents }: { agents: Agent[] }) {
     <div className="space-y-4">
       <div className="flex items-center justify-between">
         <h1 className="text-3xl font-bold mb-4">AI Agent Catalog</h1>
-        <LogoutBtn />
+        <div className="flex items-center gap-8">
+          <UserInfo />
+          <LogoutBtn />
+        </div>
       </div>
       <Filters />
       <input
