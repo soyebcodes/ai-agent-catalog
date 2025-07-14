@@ -1,6 +1,6 @@
 # AI Agent Catalog 🧠
 
-A responsive, SEO-friendly AI agent catalog built with **Next.js**, **TypeScript**, **Redux**, **Shadcn UI**, and **Framer Motion** — submitted as part of the ArkLab Frontend Internship take-home challenge.
+A responsive, SEO-friendly AI agent catalog built with **Next.js**, **TypeScript**, **Redux**, **Shadcn UI**, and **Framer Motion** — submitted as part of the Frontend Internship take-home challenge.
 
 ## 🚀 Live Demo
 
